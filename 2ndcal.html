@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div >
+    Answer=> <span id="demo"></span>
+     </div>
+    
+    <div>
+        <input type="text" placeholder="SCORE" id="score">
+   </div>
+   <div>
+    <button onclick="check()">=</button>
+</div>
+<div>
+    <button onclick="disp(1)" >1</button>
+    <button onclick="disp(2)" >2</button>
+    <button onclick="disp(3)" >3</button>
+    <button onclick="disp(4)" >4</button>
+    <button onclick="disp(5)" >5</button>
+    <button onclick="disp(6)" >6</button>
+    <button onclick="disp(7)" >7</button>
+    <button onclick="disp(8)" >8</button>
+    <button onclick="disp(9)" >9</button>
+    <button onclick="disp(0)" >0</button>
+</div>
+<div>
+    <button onclick="disp('+')" >+</button>
+    <button onclick="disp('-')" >-</button>
+    <button onclick="disp('*')" >x</button>
+    <button onclick="disp('/')" >/</button>
+    <button onclick="disp('%')" >%</button>
+</div>
+<div>
+    <button onclick="del()" id="delnum">del</button>
+    <button onclick="clr()" id="delnum">clr</button>
+</div>
+<div>
+    <button onclick="oncal()" id="onnum">on</button>
+    <button onclick="offcal()" id="offnum">off</button>
+</div>
+
+    <script>
+         
+
+      function oncal() {
+
+onenum.disabled=false;
+twonum.disabled=false;
+threenum.disabled=false;
+fournum.disabled=false;
+fivenum.disabled=false;
+plusnum.disabled=false;
+minusnum.disabled=false;
+clrnum.disabled=false;
+delnum.disabled=false;
+score.disabled=false;
+
+
+
+}
+
+
+        function del() {
+          score.value= score.value.slice(0,-1);
+          demo.innerText="";
+      }
+function clr() {
+          score.value="";
+      }
+
+      function disp(tobi) {
+          score.value+=tobi;
+      }
+      function offcal() {
+
+     var ask = disp();
+      ask.disabled=true;
+}
+
+     function check() {
+       
+        demo.innerText=eval(score.value);
+       
+     }
+
+
+    // demo.innerText="SEYI";
+    // document.getElementById('demo').innerText="wale";
+    // demo.innerHTML="ade";
+    </script>
+</body>
+</html>
